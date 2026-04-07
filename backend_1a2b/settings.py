@@ -87,14 +87,24 @@ WSGI_APPLICATION = 'backend_1a2b.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DB_NAME', 'rank_record'),
+#         'USER': os.environ.get('DB_USER', 'postgres'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD', '1285'),
+#         'HOST': os.environ.get('DB_HOST', 'db'),  # 注意：這裡要填寫 docker-compose 裡的服務名稱 'db'
+#         'PORT': os.environ.get('DB_PORT', '5432'),
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'rank_record'),
-        'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', '1285'),
-        'HOST': os.environ.get('DB_HOST', 'db'),  # 注意：這裡要填寫 docker-compose 裡的服務名稱 'db'
-        'PORT': os.environ.get('DB_PORT', '5432'),
+        'NAME': 'rank_record',   # 這裡直接寫死小寫
+        'USER': 'postgres',
+        'PASSWORD': '1285',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 
