@@ -4,7 +4,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/
     environment:
-      - POSTGRES_DB=django_db
+      - POSTGRES_DB=rank_record
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=1285
     ports:
@@ -20,7 +20,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DB_NAME=RANK_RECORD
+      - DB_NAME=rank_record
       - DB_USER=postgres
       - DB_PASSWORD=1285
       - DB_HOST=db
