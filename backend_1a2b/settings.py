@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rank_record',
     'rest_framework',
+    'corsheaders',  # 加入 CORS Headers 支援
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,6 +55,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'backend_1a2b.urls'
+# 開發時允許所有來源（上線前要改成指定網域）
+CORS_ALLOW_ALL_ORIGINS = True
 
 TEMPLATES = [
     {

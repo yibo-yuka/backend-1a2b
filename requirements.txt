@@ -19,6 +19,7 @@ cycler==0.12.1
 databases==0.9.0
 deeplens==0.0.1
 Django==5.2.4
+django-cors-headers==4.9.0
 djangorestframework==3.16.0
 et_xmlfile==2.0.0
 fastapi==0.116.1
